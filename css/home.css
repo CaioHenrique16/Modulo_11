@@ -1,0 +1,378 @@
+@import 'nav.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+}
+
+.hero-section {
+    width: 100%;
+    height: calc(100vh - 120px);
+    background-image: url('/imagens/adesivoSemfundo.png');
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 800px;
+    margin: 50px auto 0;
+    display: table;
+    box-sizing: border-box;
+}
+
+.row {
+    margin: 50px 5px;
+}
+
+.column {
+    display: table-cell;
+    padding: 10px;
+    width: 33.33333%;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.container img {
+    margin-top: 20px;
+    height: 450px;
+}
+
+.container h3 {
+    font-size: 40px;
+    float: inline-end;
+    color: black;
+    font-weight: 600;
+    text-decoration: underline rgb(0, 0, 0);
+}
+
+p {
+    justify-content: center;
+    font-size: 20px;
+    color: black;
+}
+
+span {
+    color: aqua;
+}
+
+.product {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.product-category {
+    padding: 0 10vw;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.product-container {
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.product-container::-webkit-scrollbar {
+    display: none;
+}
+
+.product-card {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+    margin-right: 40px;
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.product-thumb {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.discount-tag {
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    color: #ff7d7d;
+    right: 10px;
+    top: 10px;
+}
+
+.card-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 90%;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.product-card:hover .card-btn {
+    opacity: 1;
+}
+
+.card-btn:hover {
+    background: #efefef;
+}
+
+.product-info {
+    width: 100%;
+    height: 100px;
+    padding-top: 10px;
+}
+
+.product-brand {
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: center;
+}
+
+.product-short-des {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    opacity: 0.5;
+}
+
+.price {
+    font-weight: 900;
+    font-size: 20px;
+    color: black;
+}
+
+.actual-price {
+    margin-left: 20px;
+    opacity: 0.5;
+    text-decoration: line-through;
+    color: gray;
+}
+
+
+@media screen and (max-width: 767px) {
+    .navbar .nav {
+        display: block;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .search-btn {
+        display: none;
+    }
+
+    .links-container {
+        display: block;
+        padding: 0;
+    }
+
+    .hero-section {
+        display: block;
+        width: 100%;
+    }
+
+    .container {
+        display: block;
+        margin-left: 10px;
+        margin-top: 0;
+        width: 100%;
+    }
+    
+
+    .container img {
+        display: block;
+        width: 90%;
+        height: 200px;
+        justify-content: center;
+        
+    }
+
+    .container h3 {
+        margin-top: 10px;
+        font-size: 30px;
+        color: black;
+        font-weight: 600;
+        text-decoration: underline aqua;
+    }
+    
+    p {
+        width: 80%;
+        display: block;
+        text-align: justify;
+        font-size: 15px;
+        font-weight: 600;
+        color: black;
+    }
+
+    .product-container {
+        width: 100%;
+        display: block;
+    }
+
+    .actual-price {
+        margin-left: 20px;
+        opacity: 0.5;
+        text-decoration: line-through;
+        color: red;
+        font-weight: 600;
+    }
+
+    .card-btn {
+        bottom: 10px;
+        left: 50%;
+        padding: 10px;
+        width: 90%;
+        text-transform: capitalize;
+        border: none;
+        outline: none;
+        background: #fff;
+        border-radius: 5px;
+        transition: 0.5s;
+        cursor: pointer;
+        opacity: 1;
+    }
+
+
+    .product-card:hover .card-btn {
+        opacity: 1;
+    }
+
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .navbar .nav {
+        display: block;
+        width: 90%;
+        align-items: center;
+    }
+
+    .nav img {
+        margin-left: 180px;
+    }
+
+    .search {
+        display: block;
+        margin-top: 10px;
+        margin-left: 150px;
+        width: 70%;
+    }
+
+    .search-btn {
+    position: absolute;
+    width: 15%;
+    }
+
+    .hero-section {
+        display: block;
+        width: 100%;
+    }
+
+    .container {
+        display: block;
+        margin-left: 0;
+        margin-top: 0;
+        width: 100%;
+    }
+    
+
+    .container img {
+        display: block;
+        margin-left: 150px;
+        width: 60%;
+        height: 200px;
+        justify-content: center;
+        
+    }
+
+    .container h3 {
+        margin-top: 10px;
+        margin-left: 230px;
+        margin-bottom: 15px;
+        font-size: 30px;
+        color: black;
+        font-weight: 600;
+        text-decoration: underline aqua;
+    }
+    
+    p {
+        width: 80%;
+        margin-left: 60px;
+        display: block;
+        text-align: justify;
+        font-size: 15px;
+        font-weight: 600;
+        color: black;
+    }
+
+    .product-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 49%);
+    }
+
+    .product-card {
+        display: block;
+    }
+
+
+    .actual-price {
+        margin-left: 20px;
+        opacity: 0.5;
+        text-decoration: line-through;
+        color: red;
+        font-weight: 600;
+    }
+
+    .card-btn {
+        bottom: 10px;
+        left: 50%;
+        padding: 10px;
+        width: 90%;
+        text-transform: capitalize;
+        border: none;
+        outline: none;
+        background: #fff;
+        border-radius: 5px;
+        transition: 0.5s;
+        cursor: pointer;
+        opacity: 1;
+    }
+
+
+    .product-card:hover .card-btn {
+        opacity: 1;
+    }
+}
+
